@@ -30,6 +30,6 @@
     "@types/react-dom": "18.3.0"
   },
   "engines": {
-    "node": "^22.2.0"
+    "node": "20.x"
   }
 }
