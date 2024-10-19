@@ -6,8 +6,20 @@ export type User = {
   id: string;
   name: string;
   email: string;
-  password: string;
 };
+
+export type FormattedUserTable = {
+  name: string;
+  email: string;
+};
+
+
+export class Customers {
+  public id!: string;
+  public name!: string;
+  public email!: string;
+  public image_url!: string;
+}
 
 export type Customer = {
   id: string;
@@ -23,7 +35,7 @@ export type Invoice = {
   date: string;
   // In TypeScript, this is called a string union type.
   // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
-  status: 'pending' | 'paid';
+  status: "pending" | "paid";
 };
 
 export type Revenue = {
@@ -40,7 +52,7 @@ export type LatestInvoice = {
 };
 
 // The database returns a number for amount, but we later format it to a string with the formatCurrency function
-export type LatestInvoiceRaw = Omit<LatestInvoice, 'amount'> & {
+export type LatestInvoiceRaw = Omit<LatestInvoice, "amount"> & {
   amount: number;
 };
 
@@ -52,7 +64,7 @@ export type InvoicesTable = {
   image_url: string;
   date: string;
   amount: number;
-  status: 'pending' | 'paid';
+  status: "pending" | "paid";
 };
 
 export type CustomersTableType = {
@@ -80,9 +92,14 @@ export type CustomerField = {
   name: string;
 };
 
+export type UserField = {
+  name: string;
+  email: string;
+};
+
 export type InvoiceForm = {
   id: string;
   customer_id: string;
   amount: number;
-  status: 'pending' | 'paid';
+  status: "pending" | "paid";
 };

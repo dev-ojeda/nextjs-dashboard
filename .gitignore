@@ -12,7 +12,8 @@
 /.vscode/
 /.next/
 /out/
-
+/prisma/
+app/generated/**/
 # production
 /build
 
